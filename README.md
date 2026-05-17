@@ -37,3 +37,7 @@ In this project I analyze medical appointment no-show patterns using a healthcar
 ## Status
 
 In progress.
+
+## Data Cleaning Notes
+- Column names were standardized for easier analysis.
+- One record had an impossible age value of -1. Because the true age could not be verified from other records, this record was removed from the analysis.
