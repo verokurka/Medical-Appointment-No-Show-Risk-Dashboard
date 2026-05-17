@@ -41,3 +41,4 @@ In progress.
 ## Data Cleaning Notes
 - Column names were standardized for easier analysis.
 - One record had an impossible age value of -1. Because the true age could not be verified from other records, this record was removed from the analysis.
+- Five records had negative waiting days, meaning the appointment date occurred before the scheduled date. These records were removed because the scheduling interval was not logically valid. All five were no-shows, but the count was too small to interpret as a meaningful pattern.
