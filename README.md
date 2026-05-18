@@ -53,11 +53,22 @@ Completed:
 - One record had an impossible age value of -1. Because the true age could not be verified from other records, this record was removed from the analysis.
 - Five records had negative waiting days, meaning the appointment date occurred before the scheduled date. These records were removed because the scheduling interval was not logically valid. All five were no-shows, but the count was too small to interpret as a meaningful pattern.
 
+## Selected Exploratory Charts
+
+- No-show percentage by age group
+- No-show percentage by gender
+- No-show percentage by waiting time
+- No-show percentage by SMS reminder status
+- No-show percentage by waiting time and SMS reminder status
+- No-show percentage by appointment weekday
+- No-show percentage by scheduled weekday
+- Top neighbourhoods by no-show percentage
+
 ## Key Preliminary Findings
 
 - The overall no-show rate was approximately 20.2%.
 - No-show percentages were higher among teens and younger adults than among older adults.
 - Waiting time showed a clear pattern: appointments scheduled farther in advance had higher no-show percentages.
-- Appointments with an SMS reminder recorded had a higher no-show percentage, but this should be interpreted as an association, not causation.
+- Appointments with an SMS reminder recorded had a higher no-show percentage, but after stratifying by waiting time, the pattern changed. Within waiting-time groups where both SMS and no-SMS appointments were present, appointments with SMS reminders generally had lower no-show percentages than appointments without SMS reminders. 
 - Neither neighbourhood nor gender did appear to meaningfully differentiate no-show percentages.
 
