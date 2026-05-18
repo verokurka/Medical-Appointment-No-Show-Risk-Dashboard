@@ -1,0 +1,13 @@
+waiting_days_group,sms_status,total_appointments,no_show_percent
+Same day,No SMS received,38562,4.64706187438401
+1 day,No SMS received,5213,21.350469978898847
+2-3 days,No SMS received,8556,23.99485741000463
+2-3 days,SMS received,906,21.302428256070648
+4-7 days,No SMS received,6868,27.111240535818364
+4-7 days,SMS received,10642,23.971058071790925
+8-14 days,No SMS received,5021,33.75821549492131
+8-14 days,SMS received,7004,28.112507138777932
+15-30 days,No SMS received,6851,36.87052984965708
+15-30 days,SMS received,10520,29.800380228136714
+31+ days,No SMS received,3968,37.52520161290324
+31+ days,SMS received,6410,30.20280811232449
