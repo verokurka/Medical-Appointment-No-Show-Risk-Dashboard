@@ -23,7 +23,7 @@ In this project I analyze medical appointment no-show patterns using a healthcar
 - Exploratory data analysis
 - Feature engineering
 - Dashboard development
-- Optional logistic regression risk scoring ?????
+- Logistic regression risk scoring
 - Case study writing
 
 ## Planned Deliverables
@@ -36,9 +36,28 @@ In this project I analyze medical appointment no-show patterns using a healthcar
 
 ## Status
 
-In progress.
+Completed: 
+- Cleaned raw appointment dataset
+- Created analysis-ready variables
+- Generated exploratory summary tables
+- Created exploratory charts
+- Drafted preliminary case study notes
+
+- In progress:
+- Tableau dashboard
+- Final case study
+- Logistic regression / risk scoring
 
 ## Data Cleaning Notes
 - Column names were standardized for easier analysis.
 - One record had an impossible age value of -1. Because the true age could not be verified from other records, this record was removed from the analysis.
 - Five records had negative waiting days, meaning the appointment date occurred before the scheduled date. These records were removed because the scheduling interval was not logically valid. All five were no-shows, but the count was too small to interpret as a meaningful pattern.
+
+## Key Preliminary Findings
+
+- The overall no-show rate was approximately 20.2%.
+- No-show percentages were higher among teens and younger adults than among older adults.
+- Waiting time showed a clear pattern: appointments scheduled farther in advance had higher no-show percentages.
+- Appointments with an SMS reminder recorded had a higher no-show percentage, but this should be interpreted as an association, not causation.
+- Neither neighbourhood nor gender did appear to meaningfully differentiate no-show percentages.
+
