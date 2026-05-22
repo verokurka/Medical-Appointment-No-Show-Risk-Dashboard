@@ -52,7 +52,7 @@ Appointment weekday showed some variation, with Saturday appointments having the
 
 ![](outputs/charts/no_show_by_appointment_weekday.png)
 
-Scheduled weekday showed relatively similar no-show percentages Monday through Friday. Saturday-scheduled appointments were different, but this should be interpreted alongside appointment volume.
+Scheduled weekday showed relatively similar no-show percentages Monday through Friday. Saturday-scheduled appointments were different, but there were only 24 appointments scheduled that day. Because of the very small denominator, this pattern was not emphasized in the dashboard.
 
 ![](outputs/charts/no_show_by_scheduled_weekday.png)
 
