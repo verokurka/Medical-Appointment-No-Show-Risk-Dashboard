@@ -66,6 +66,10 @@ Some neighbourhoods had higher no-show percentages than others. These findings s
 
 No-show percentages were also checked by appointment week to see whether short-term calendar patterns appeared. Weekly no-show percentages did not vary enough to become a major focus of the dashboard. Because the dataset covers a short time period, stronger conclusions about seasonal patterns, holidays, or school breaks would require more months of data.
 
+## Chronic condition count
+
+Patients with 1–3 recorded chronic/health conditions had slightly lower no-show percentages than patients with no recorded conditions. The group with 4 recorded conditions had a higher no-show percentage, about 30.8%, but this group included only 13 appointments. Because the denominator was very small, this value was not interpreted as a stable pattern. To avoid overemphasizing an unstable subgroup, chronic condition count was kept as a secondary exploratory note rather than a main visual finding.
+
 ### Main takeaway
 
 The strongest exploratory patterns were waiting time and age group. Longer scheduling delays were associated with higher no-show percentages, and younger patients had higher no-show percentages than older adults.
