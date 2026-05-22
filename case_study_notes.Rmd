@@ -62,6 +62,10 @@ Some neighbourhoods had higher no-show percentages than others. These findings s
 
 ![](outputs/charts/no_show_by_neighbourhood_min100_top15.png)
 
+## Appointment week pattern
+
+No-show percentages were also checked by appointment week to see whether short-term calendar patterns appeared. Weekly no-show percentages did not vary enough to become a major focus of the dashboard. Because the dataset covers a short time period, stronger conclusions about seasonal patterns, holidays, or school breaks would require more months of data.
+
 ### Main takeaway
 
 The strongest exploratory patterns were waiting time and age group. Longer scheduling delays were associated with higher no-show percentages, and younger patients had higher no-show percentages than older adults.
