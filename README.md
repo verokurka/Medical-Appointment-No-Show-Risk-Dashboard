@@ -37,14 +37,13 @@ In this project I analyze medical appointment no-show patterns using a healthcar
 ## Status
 
 Completed: 
-- Cleaned raw appointment dataset
+- Cleaned and validated the raw appointment dataset
 - Created analysis-ready variables
-- Generated exploratory summary tables
-- Created exploratory charts
+- Generated exploratory summary tables and charts
+- Built an interactive Tableau dashboard
 - Drafted preliminary case study notes
 
-- In progress:
-- Tableau dashboard
+In progress:
 - Final case study
 - Logistic regression / risk scoring
 
@@ -72,3 +71,16 @@ Completed:
 - Appointments with an SMS reminder recorded had a higher no-show percentage, but after stratifying by waiting time, the pattern changed. Within waiting-time groups where both SMS and no-SMS appointments were present, appointments with SMS reminders generally had lower no-show percentages than appointments without SMS reminders. 
 - Neither neighbourhood nor gender did appear to meaningfully differentiate no-show percentages.
 
+## Tableau Dashboard
+
+I created an interactive Tableau dashboard to explore appointment no-show patterns and identify patterns that may help prioritize patient outreach.
+
+[View the Tableau Public dashboard](https://public.tableau.com/app/profile/ver.nica.kurka/viz/MedicalAppointmentNo-ShowAnalysis_17796763435720/Dashboard1)
+
+The dashboard highlights:
+
+- Overall appointment volume, no-show count, no-show rate, and average waiting time
+- No-show percentage by waiting time and SMS reminder status
+- No-show percentage by age group
+- No-show percentage by weekday of appointment and day scheduled
+- Neighbourhood-level no-show patterns interpreted alongside appointment volume
