@@ -104,14 +104,52 @@ Younger age groups also had higher no-show odds compared with the 50–64 refere
 
 SMS reminder status was associated with lower no-show odds after adjustment. Appointments with an SMS reminder had lower odds of no-show compared with appointments with no SMS reminder recorded.
 
+![](outputs/charts/final_logistic_model_odds_ratio_plot.png)
+
 ### Model performance
 
 Prediction performance was evaluated on the held-out test set. At the default 0.50 classification threshold, the model had very low sensitivity because it rarely classified appointments as predicted no-shows. Because the project goal was potential outreach prioritization, lower thresholds were evaluated.
 
 A 0.25 threshold provided a more useful balance, identifying about 67% of actual no-shows while maintaining about 65% specificity. Precision was modest, meaning many flagged appointments would still have shown up. This suggests the model is better suited for broad outreach prioritization than precise individual prediction.
 
-The ROC-AUC was approximately 0.73, indicating decent discrimination for a baseline logistic regression model. Calibration by risk decile showed that predicted probabilities were reasonably aligned with observed no-show rates.
+The ROC-AUC was approximately 0.73, indicating decent discrimination for a baseline logistic regression model. 
+
+![](outputs/charts/final_model_roc_curve.png)
+
+Calibration by risk decile showed that predicted probabilities were reasonably aligned with observed no-show rates.
+
+![](outputs/charts/final_model_calibration_plot.png)
 
 ### Modeling limitations
 
 This model identifies associations and provides baseline risk estimates, but it does not prove causation. The dataset has limited operational and clinical context, and some variables may reflect scheduling workflow rather than patient behavior alone. The model should not be used as a deployed clinical decision tool without additional validation, stakeholder review, and fairness assessment.
+
+# Answers to research questions
+
+### 1. What is the overall no-show rate?
+
+The overall no-show rate was approximately 20.2%, meaning about one in five scheduled appointments resulted in a no-show.
+
+### 2. Do no-show rates vary by age group, gender, neighbourhood, or weekday?
+
+No-show rates varied most clearly by age group. Teens and younger adults had higher no-show percentages, while older adults had lower no-show percentages. Gender showed very little difference and was not a major practical pattern.
+
+Neighbourhood-level no-show percentages varied, but these results depended heavily on appointment volume. For that reason, neighbourhood patterns were interpreted alongside appointment counts rather than treated as simple rankings.
+
+Weekday patterns showed some variation, but Saturday appointment and scheduling patterns had small denominators and were interpreted cautiously.
+
+### 3. Is waiting time between scheduling and appointment date associated with missed appointments?
+
+Yes. Waiting time showed one of the strongest patterns in both the exploratory analysis and logistic regression model. Same-day appointments had the lowest no-show percentage, and no-show percentages increased as waiting time became longer. In the adjusted logistic regression model, longer waiting-time groups had substantially higher odds of no-show compared with same-day appointments.
+
+### 4. Are SMS reminders associated with different no-show patterns?
+
+Yes, but the relationship required careful interpretation. In the basic exploratory comparison, appointments with SMS reminders appeared to have higher no-show percentages. However, SMS reminder status was not evenly distributed across waiting-time groups.
+
+After comparing SMS and no-SMS appointments within the same waiting-time categories, SMS reminders were generally associated with lower no-show percentages. The adjusted logistic regression model also found that SMS reminder status was associated with lower no-show odds. This suggests SMS reminders may be helpful, but the analysis does not prove a causal effect.
+
+### 5. How could a healthcare or public health program use these findings to improve outreach?
+
+A healthcare or public health program could use these findings to prioritize outreach for appointments with longer waiting times and for age groups with higher no-show risk. The baseline logistic regression model could also support broad outreach prioritization by assigning appointments predicted no-show probabilities.
+
+Because model precision was modest, the model would be better suited for low-cost outreach, such as extra SMS reminders, automated calls, or reminder workflows, rather than high-stakes individual decision-making. Programs should also monitor appointment volume when interpreting subgroup patterns, especially for neighbourhood or weekday comparisons.
