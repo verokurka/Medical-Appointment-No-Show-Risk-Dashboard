@@ -131,11 +131,13 @@ The model should be interpreted as a baseline outreach-prioritization model, not
 ├── case_study_notes.html
 └── README.md
 
+```
 ```markdown
 ## How to Reproduce
 
 Run the analysis scripts in order:
 
+```
 ```r
 source("analysis/01_clean_data.R")
 source("analysis/02_feature_engineering.R")
