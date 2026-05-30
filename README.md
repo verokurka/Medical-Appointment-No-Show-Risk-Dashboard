@@ -42,10 +42,10 @@ Completed:
 - Generated exploratory summary tables and charts
 - Built an interactive Tableau dashboard
 - Drafted preliminary case study notes
+- Baseline logistic regression
 
 In progress:
 - Final case study
-- Logistic regression / risk scoring
 
 ## Data Cleaning Notes
 - Column names were standardized for easier analysis.
