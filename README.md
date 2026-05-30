@@ -101,3 +101,60 @@ Key findings:
 - At a 0.25 outreach threshold, the model identified about 67% of actual no-shows, but precision was modest.
 
 The model should be interpreted as a baseline outreach-prioritization model, not as a definitive individual prediction tool.
+
+
+## Key Outputs
+
+- [Tableau Public Dashboard](https://public.tableau.com/app/profile/ver.nica.kurka/viz/MedicalAppointmentNo-ShowAnalysis_17796763435720/Dashboard1)
+- [Rendered Case Study Notes](case_study_notes.html)
+- [R Markdown Case Study Source](case_study_notes.Rmd)
+- [Baseline Logistic Regression Script](analysis/04_baseline_logistic_model.R)
+
+## Repository Structure
+
+```text
+.
+├── analysis/
+│   ├── 01_clean_data.R
+│   ├── 02_feature_engineering.R
+│   ├── 03_summary_and_plots.R
+│   └── 04_baseline_logistic_model.R
+├── dashboard/
+│   └── tableau_public_link.md
+├── data/
+│   └── processed/
+    └── raw/
+├── outputs/
+│   ├── charts/
+│   └── tables/
+├── case_study_notes.Rmd
+├── case_study_notes.html
+└── README.md
+
+```markdown
+## How to Reproduce
+
+Run the analysis scripts in order:
+
+```r
+source("analysis/01_clean_data.R")
+source("analysis/02_feature_engineering.R")
+source("analysis/03_summary_and_plots.R")
+source("analysis/04_baseline_logistic_model.R")
+
+```markdown
+## Limitations
+
+- This project uses a public dataset and should not be interpreted as a deployed clinical prediction system.
+- The analysis identifies associations, not causal effects.
+- Some subgroup patterns, especially weekday and neighbourhood comparisons, are sensitive to appointment volume.
+- SMS reminder status may be related to scheduling delay, so simple SMS vs no-SMS comparisons can be misleading.
+- The model provides baseline outreach-prioritization probabilities, not definitive individual predictions.
+
+## Possible Next Steps
+
+- Test additional model types such as regularized logistic regression or tree-based models.
+- Evaluate model fairness across demographic or neighbourhood groups.
+- Add cost-based threshold selection for outreach planning.
+- Validate the model on a different time period or external dataset.
+- Explore appointment type, clinic, provider, and historical attendance if available.
