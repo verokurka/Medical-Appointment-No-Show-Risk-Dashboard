@@ -84,3 +84,20 @@ The dashboard highlights:
 - No-show percentage by age group
 - No-show percentage by weekday of appointment and day scheduled
 - Neighbourhood-level no-show patterns interpreted alongside appointment volume
+
+## Baseline Logistic Regression Model
+
+As an extension to the exploratory analysis and Tableau dashboard, I fit a baseline logistic regression model to evaluate adjusted associations with appointment no-show odds and assess basic predictive performance.
+
+The model used an 80/20 stratified train-test split. Predictors included waiting time group, age group, SMS reminder status, gender, scholarship status, selected health indicators, appointment weekday, and scheduled weekday.
+
+Model diagnostics included checks for convergence, multicollinearity, influential observations, predicted probability range, ROC-AUC, and calibration.
+
+Key findings:
+- Longer waiting times were strongly associated with higher no-show odds.
+- Younger age groups had higher no-show odds than the 50–64 reference group.
+- SMS reminder status was associated with lower no-show odds after adjustment.
+- The model showed decent discrimination, with ROC-AUC around 0.73.
+- At a 0.25 outreach threshold, the model identified about 67% of actual no-shows, but precision was modest.
+
+The model should be interpreted as a baseline outreach-prioritization model, not as a definitive individual prediction tool.
