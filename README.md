@@ -130,21 +130,21 @@ The model should be interpreted as a baseline outreach-prioritization model, not
 ├── case_study_notes.Rmd
 ├── case_study_notes.html
 └── README.md
-
 ```
-```markdown
+
 ## How to Reproduce
 
 Run the analysis scripts in order:
 
-```
+
 ```r
 source("analysis/01_clean_data.R")
 source("analysis/02_feature_engineering.R")
 source("analysis/03_summary_and_plots.R")
 source("analysis/04_baseline_logistic_model.R")
 
-```markdown
+```
+
 ## Limitations
 
 - This project uses a public dataset and should not be interpreted as a deployed clinical prediction system.
